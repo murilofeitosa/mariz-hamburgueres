@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 170" role="img" aria-label="Mariz Hambúrgueres"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2a8"/><stop offset=".45" stop-color="#f5c542"/><stop offset="1" stop-color="#b8860b"/></linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round">
+<path d="M20 70 Q20 22 90 22 Q160 22 160 70 Z" fill="url(#g)" fill-opacity=".15"/>
+<path d="M14 88 H166"/><path d="M20 106 Q24 118 40 112 T76 112 T112 112 T148 112 T164 106" />
+<path d="M20 130 H160 V138 Q160 152 144 152 H36 Q20 152 20 138 Z" fill="url(#g)" fill-opacity=".15"/>
+</g>
+<g fill="url(#g)"><circle cx="70" cy="42" r="3"/><circle cx="95" cy="36" r="3"/><circle cx="120" cy="44" r="3"/><circle cx="50" cy="56" r="3"/><circle cx="140" cy="56" r="3"/></g>
+<text x="190" y="104" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="88" fill="url(#g)" letter-spacing="2">MARIZ</text>
+<text x="194" y="146" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="url(#g)" letter-spacing="9">HAMBURGUERES</text>
+</svg>

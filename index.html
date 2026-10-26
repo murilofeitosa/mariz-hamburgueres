@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariz Hambúrgueres — Hambúrguer artesanal | Cardápio e pedidos</title>
+  <meta name="description" content="Cardápio completo da Mariz Hambúrgueres: hambúrgueres artesanais, linha premium (picanha, filé mignon, contra filé) e adicionais. Monte seu pedido e envie pelo WhatsApp.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariz Hambúrgueres — Hambúrguer artesanal">
+  <meta property="og:description" content="Veja o cardápio e peça pelo WhatsApp.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="header" id="topo">
+  <div class="container header__in">
+    <a href="#topo" class="brand" aria-label="Mariz Hambúrgueres — início">
+      <img src="assets/img/logo.svg" alt="Mariz Hambúrgueres" height="46">
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#como-pedir">Como pedir</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 2v2h2l3.6 7.6-1.4 2.4A2 2 0 0 0 9 17h12v-2H9.4l1.1-2h7.5a2 2 0 0 0 1.7-1l3.6-6.5A1 1 0 0 0 22.4 4H6.2l-.9-2H3Z"/></svg>
+      <span class="cart-btn__n" id="cartCount">0</span>
+    </button>
+    <button class="burger-menu" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__in">
+    <div class="hero__txt">
+      <span class="badge" id="statusBadge">Verificando horário…</span>
+      <h1>Hambúrguer <em>artesanal</em><br>de verdade.</h1>
+      <p>Pão bola ou pão árabe, carne no ponto e muito sabor. Monte seu pedido aqui e envie direto pelo WhatsApp.</p>
+      <div class="hero__cta">
+        <a href="#cardapio" class="btn btn--gold">Ver cardápio</a>
+        <a href="#" class="btn btn--ghost" id="heroWhats" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      </div>
+      <ul class="hero__pills">
+        <li>🍔 12 sabores tradicionais</li>
+        <li>👑 5 opções premium</li>
+        <li>➕ Adicionais à parte</li>
+      </ul>
+    </div>
+    <div class="hero__img" id="heroArt" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ DESTAQUES ============ -->
+<section class="section" id="destaques">
+  <div class="container">
+    <h2 class="title"><span>Os mais pedidos</span></h2>
+    <div class="featured" id="featured"></div>
+  </div>
+</section>
+
+<!-- ============ CARDÁPIO ============ -->
+<section class="section section--dark" id="cardapio">
+  <div class="container">
+    <h2 class="title"><span>Cardápio</span></h2>
+
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Categorias">
+        <button class="tab is-active" role="tab" data-cat="tradicionais">Tradicionais</button>
+        <button class="tab" role="tab" data-cat="premium">Premium</button>
+        <button class="tab" role="tab" data-cat="adicionais">Adicionais</button>
+      </div>
+      <div class="bread" id="breadSwitch" role="group" aria-label="Tipo de pão">
+        <span class="bread__lbl">Pão:</span>
+        <button class="bread__opt is-active" data-pao="0">Pão bola</button>
+        <button class="bread__opt" data-pao="1">Pão árabe</button>
+      </div>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+
+    <p class="note">Os preços mostrados mudam conforme o pão escolhido. Itens com adicionais são calculados no carrinho.</p>
+  </div>
+</section>
+
+<!-- ============ COMO PEDIR ============ -->
+<section class="section" id="como-pedir">
+  <div class="container">
+    <h2 class="title"><span>Como pedir</span></h2>
+    <ol class="steps">
+      <li><b>1</b><h3>Escolha</h3><p>Navegue pelo cardápio e toque em <em>Adicionar</em>.</p></li>
+      <li><b>2</b><h3>Personalize</h3><p>Pão bola ou árabe, adicionais e observações.</p></li>
+      <li><b>3</b><h3>Finalize</h3><p>Informe nome, entrega ou retirada e pagamento.</p></li>
+      <li><b>4</b><h3>WhatsApp</h3><p>Enviamos o pedido pronto para o nosso WhatsApp. É só confirmar!</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section section--dark" id="contato">
+  <div class="container contact">
+    <div>
+      <h2 class="title title--left"><span>Fale com a gente</span></h2>
+      <ul class="info" id="infoList"></ul>
+      <a href="#" class="btn btn--gold" id="contactWhats" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+    <div class="hours">
+      <h3>Horário de funcionamento</h3>
+      <table id="hoursTable"></table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <img src="assets/img/logo.svg" alt="Mariz Hambúrgueres" height="38">
+    <p>© <span id="year"></span> Mariz Hambúrgueres. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Botão flutuante -->
+<a href="#" class="fab" id="fabWhats" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.600L3.200 29l7.100-2.100A12.600 12.600 0 0 0 16 28c7 0 12.600-5.600 12.600-12.500S23 3 16 3Zm0 22.800c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.200 1.200 1.200-4.100-.3-.4a10.200 10.200 0 0 1-1.600-5.400C5.400 9.800 10.100 5.200 16 5.200s10.600 4.600 10.600 10.300S21.900 25.800 16 25.800Zm5.800-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.500 8.500 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.200 1.200-1.200 2.800 1.200 3.300 1.400 3.500 2.400 3.700 5.800 5.100c2.100.9 2.900 1 4 .8.600-.1 1.900-.8 2.200-1.500s.3-1.400.2-1.500-.3-.2-.6-.4Z"/></svg>
+</a>
+
+<!-- ============ MODAL DO ITEM ============ -->
+<div class="overlay" id="overlay" hidden></div>
+
+<dialog class="modal" id="itemModal" aria-labelledby="mTitle">
+  <button class="modal__x" id="mClose" aria-label="Fechar">×</button>
+  <div class="modal__art" id="mArt"></div>
+  <div class="modal__body">
+    <h3 id="mTitle"></h3>
+    <p class="modal__desc" id="mDesc"></p>
+
+    <fieldset class="opt">
+      <legend>Pão</legend>
+      <label class="radio"><input type="radio" name="mPao" value="0" checked> <span>Pão bola</span> <b id="mPrice0"></b></label>
+      <label class="radio"><input type="radio" name="mPao" value="1"> <span>Pão árabe</span> <b id="mPrice1"></b></label>
+    </fieldset>
+
+    <fieldset class="opt" id="mExtrasBox">
+      <legend>Adicionais</legend>
+      <div id="mExtras"></div>
+    </fieldset>
+
+    <label class="field">Observações
+      <textarea id="mObs" rows="2" maxlength="140" placeholder="Ex.: sem cebola, ponto da carne…"></textarea>
+    </label>
+
+    <div class="modal__foot">
+      <div class="qty">
+        <button type="button" id="mMinus" aria-label="Diminuir">−</button>
+        <span id="mQty">1</span>
+        <button type="button" id="mPlus" aria-label="Aumentar">+</button>
+      </div>
+      <button class="btn btn--gold btn--block" id="mAdd">Adicionar · <span id="mTotal"></span></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============ CARRINHO ============ -->
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Carrinho">
+  <div class="drawer__head">
+    <h3>Seu pedido</h3>
+    <button class="modal__x" id="closeCart" aria-label="Fechar carrinho">×</button>
+  </div>
+
+  <div class="drawer__body">
+    <div id="cartEmpty" class="empty">
+      <p>Seu carrinho está vazio.</p>
+      <a href="#cardapio" class="btn btn--ghost" id="goMenu">Ver cardápio</a>
+    </div>
+    <ul class="cart" id="cartList"></ul>
+
+    <form id="checkout" class="checkout" hidden novalidate>
+      <h4>Seus dados</h4>
+      <label class="field">Nome *
+        <input type="text" id="cNome" autocomplete="name" required placeholder="Seu nome">
+      </label>
+
+      <div class="seg" role="group" aria-label="Tipo de pedido">
+        <label><input type="radio" name="cTipo" value="entrega" checked><span>🛵 Entrega</span></label>
+        <label><input type="radio" name="cTipo" value="retirada"><span>🏪 Retirada</span></label>
+      </div>
+
+      <div id="addrBox">
+        <label class="field">Endereço *
+          <input type="text" id="cEnd" autocomplete="street-address" placeholder="Rua, número, bairro">
+        </label>
+        <label class="field">Ponto de referência
+          <input type="text" id="cRef" placeholder="Opcional">
+        </label>
+      </div>
+
+      <label class="field">Forma de pagamento
+        <select id="cPag"></select>
+      </label>
+      <label class="field" id="trocoBox" hidden>Troco para quanto?
+        <input type="text" id="cTroco" inputmode="decimal" placeholder="Ex.: 50">
+      </label>
+    </form>
+  </div>
+
+  <div class="drawer__foot" id="drawerFoot" hidden>
+    <div class="sum"><span>Subtotal</span><b id="cartTotal">R$ 0,00</b></div>
+    <small id="feeNote">Taxa de entrega combinada pelo WhatsApp.</small>
+    <button class="btn btn--wa btn--block" id="sendWhats">Enviar pedido pelo WhatsApp</button>
+    <button class="link" id="clearCart">Esvaziar carrinho</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/burger-art.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
